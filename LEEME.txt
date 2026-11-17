@@ -1,0 +1,11 @@
+FITBA · Dashboard de la Fase 1 · versión estática para Streamlit Community Cloud
+
+Es el mismo dashboard que estaba desplegado en EasyPanel (servicio fitba-streamlit).
+Diferencias con esa versión:
+1. En lugar de conectarse a MariaDB, ejecuta las mismas consultas sobre fitba.db,
+   una copia SQLite de las tablas sensor_readings, lecturas y lecturas_3_estratos.
+2. Los períodos relativos ("Últimas 24 horas", etc.) se cuentan desde la última
+   lectura registrada, porque la copia no se actualiza.
+Las fotografías de Galería y Timelapse están en la carpeta uploads/.
+
+Uso local: pip install -r requirements.txt  y  streamlit run app.py
